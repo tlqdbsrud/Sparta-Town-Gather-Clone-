@@ -103,7 +103,7 @@
                 {
                     "name": "",
                     "id": "c1aee8aa-5ef8-4b1a-be11-d536f7552bca",
-                    "path": "<Mouse>/delta/left",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
