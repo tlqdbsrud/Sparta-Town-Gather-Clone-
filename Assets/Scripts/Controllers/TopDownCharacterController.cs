@@ -8,7 +8,7 @@ public class TopDownCharacterController : MonoBehaviour
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
 
-    public void CallMoveEvent(Vector2 direction)
+    public void CallMoveEvent(Vector2 direction) // direction = value.Get<Vector2>().normalized
     {
         OnMoveEvent?.Invoke(direction);
     }
