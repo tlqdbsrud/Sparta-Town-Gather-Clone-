@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class InputFieldMinimumLength : MonoBehaviour
+public class InputName : MonoBehaviour
 {
     private TMP_InputField _inputField;
     public Button _button; // 버튼에 대한 참조
@@ -31,6 +31,8 @@ public class InputFieldMinimumLength : MonoBehaviour
         {
             _button.interactable = true; // 버튼 활성화
             _text.text = "";
+
+            PlayerPrefs.SetString("PlayerName", text);
         }
     }
 }

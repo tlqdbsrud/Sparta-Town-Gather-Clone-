@@ -8,11 +8,6 @@ public class FollowCamera : MonoBehaviour
     public float moveSpeed; // 카메라 따라갈 속도
     private Vector3 targetPosition; // 대상의 현재 위치
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if(target.gameObject != null) // 대상 존재 확인
