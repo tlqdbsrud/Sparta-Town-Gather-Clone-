@@ -10,7 +10,7 @@ public class FollowCamera : MonoBehaviour
 
     private void Update()
     {
-        if(target.gameObject != null) // 대상 존재 확인
+        if (target.gameObject != null) // 대상 존재 확인
         {
             // this: 카메라 의미 (z값: 카메라값 그대로 유지)
             targetPosition.Set(target.transform.position.x, target.transform.position.y, this.transform.position.z);
