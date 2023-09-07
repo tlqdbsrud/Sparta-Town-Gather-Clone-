@@ -8,14 +8,24 @@ public class FollowCamera : MonoBehaviour
     public float moveSpeed; // 카메라 따라갈 속도
     private Vector3 targetPosition; // 대상의 현재 위치
 
+    private void Start()
+    {
+
+    }
+
     private void Update()
     {
-        if (target.gameObject != null) // 대상 존재 확인
-        {
-            // this: 카메라 의미 (z값: 카메라값 그대로 유지)
-            targetPosition.Set(target.transform.position.x, target.transform.position.y, this.transform.position.z);
+        // "Player" 태그를 가진 오브젝트를 찾음
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-            this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        if (player != null)
+        {
+            // 카메라의 z 위치는 유지하고 x와 y 위치를 대상의 위치로 설정
+            targetPosition.Set(player.transform.position.x, player.transform.position.y, transform.position.z);
+
+            // Lerp 함수를 사용하여 부드럽게 따라가기
+            transform.position = Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
+        Debug.Log("카메라");
     }
 }

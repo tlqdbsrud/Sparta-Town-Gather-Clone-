@@ -31,6 +31,7 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 wizardImage.gameObject.SetActive(false);
                 SelectCanvas.gameObject.SetActive(false);
                 PlayerPrefs.SetString("SelectedCharacter", "Penguin"); // 선택 캐릭터 PlayerPrefs에 저장
+                Debug.Log("펭귄 버튼");
 
                 break;
             case BTNType.Wizard:
@@ -38,6 +39,7 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 penguinImage.gameObject.SetActive(false);
                 SelectCanvas.gameObject.SetActive(false);
                 PlayerPrefs.SetString("SelectedCharacter", "Wizard"); // 선택 캐릭터 PlayerPrefs에 저장
+                Debug.Log("마법사 버튼");
 
                 break;
             case BTNType.Back:
