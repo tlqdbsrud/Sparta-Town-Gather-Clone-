@@ -12,6 +12,10 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public GameObject SelectCanvas; // 캐릭터 선택 화면
 
+    public GameObject penguinImage; // 펭귄 이미지
+    public GameObject wizardImage; // 마법사 이미지
+
+
     private void Start()
     {
         defaultScale = buttonScale.localScale;
@@ -19,20 +23,25 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnBtnclick()
     {
+
         switch (currentType)
         {
             case BTNType.Penguin:
-                SceneManager.LoadScene("SampleScene");
-                Debug.Log("펭귄");
+                penguinImage.gameObject.SetActive(true);
+                wizardImage.gameObject.SetActive(false);
+                SelectCanvas.gameObject.SetActive(false);
+                PlayerPrefs.SetString("SelectedCharacter", "Penguin"); // 선택 캐릭터 PlayerPrefs에 저장
 
                 break;
             case BTNType.Wizard:
-                SceneManager.LoadScene("SampleScene");
-                Debug.Log("마법사");
+                wizardImage.gameObject.SetActive(true);
+                penguinImage.gameObject.SetActive(false);
+                SelectCanvas.gameObject.SetActive(false);
+                PlayerPrefs.SetString("SelectedCharacter", "Wizard"); // 선택 캐릭터 PlayerPrefs에 저장
+
                 break;
             case BTNType.Back:
                 SelectCanvas.gameObject.SetActive(false);
-                Debug.Log("뒤로가기");
                 break;
         }
     }
