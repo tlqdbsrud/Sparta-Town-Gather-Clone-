@@ -15,9 +15,9 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public GameObject penguinImage; // 펭귄 이미지
     public GameObject wizardImage; // 마법사 이미지
 
-
     private void Start()
     {
+       // PlayerPrefs.DeleteKey("SelectedCharacter");
         defaultScale = buttonScale.localScale;
     }
 

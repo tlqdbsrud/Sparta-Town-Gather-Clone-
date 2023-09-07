@@ -1231,8 +1231,8 @@ MonoBehaviour:
   currentType: 2
   buttonScale: {fileID: 653709159}
   SelectCanvas: {fileID: 1666074573}
-  penguinImage: {fileID: 0}
-  wizardImage: {fileID: 0}
+  penguinImage: {fileID: 1117790450}
+  wizardImage: {fileID: 1802436249}
 --- !u!1 &737036657
 GameObject:
   m_ObjectHideFlags: 0
